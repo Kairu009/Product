@@ -8,7 +8,7 @@ git clone https://github.com/Kairu009/Task-Management.git
 
 ### Open file directory
 ```sh
-cd Task-Management
+cd Product
 ```
 
 ### Install project dependencies
