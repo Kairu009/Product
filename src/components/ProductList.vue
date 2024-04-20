@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <h2>Products Lists</h2>
+    <h2>Listahan ng Producto</h2>
     <div class="scroll">
       <div class="container">
         <transition-group name="fade">
