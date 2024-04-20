@@ -18,7 +18,7 @@ git clone https://github.com/Kairu009/Product.git
 ### Open file directory
 
 ```sh
-cd Product
+cd Product-main
 ```
 
 ### Install project dependencies
