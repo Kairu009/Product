@@ -49,7 +49,7 @@ export default {
 h2 {
   font-weight: 500;
   font-size: 30px;
-  color: #fff;
+  color: black;
   text-align: center;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -67,7 +67,7 @@ form input {
 
 label {
   margin-bottom: 5px;
-  color: #fff;
+  color: black;
 }
 
 form input {
