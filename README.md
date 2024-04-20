@@ -44,7 +44,7 @@ When the user click on the circular with plus sign the user will be prompt to th
 The user will fill up the input field to add new item to the list. <br/><br/>
 
 ![image](https://github.com/Kairu009/Product/assets/139950310/4ec15831-0546-4f2f-ad74-56cb64e906e0)
-Result <br/><br/>
+<strong>Result</strong> <br/><br/>
 
 ![click_edit](https://github.com/Kairu009/Product/assets/139950310/b4c712a5-6be6-444a-9302-6d9345439d57)
 When the user click on the Edit button the user will be directed in the EditProduct.vue and the input value will be filled on what card the user click. <br/><br/>
@@ -53,4 +53,4 @@ When the user click on the Edit button the user will be directed in the EditProd
 When the user click on the save button. <br/><br/>
 
 ![image](https://github.com/Kairu009/Product/assets/139950310/b2f1b47c-4f57-434d-8096-5b8bb4a54554)
-Result
+<strong>Result</strong>
