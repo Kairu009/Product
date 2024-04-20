@@ -20,7 +20,7 @@ const router = createRouter({
       component: AddProduct,
     },
     {
-      path: "/DeleteProduct",
+      path: "/DeleteProduct/:id",
       name: "deleteProduct",
       component: DeleteProduct,
     },
