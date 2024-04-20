@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Shelf from "../views/ShelfView.vue";
 import AddProduct from "../components/AddProduct.vue";
+import DeleteProduct from "../components/DeleteProduct.vue";
 import EditProduct from "../components/EditProduct.vue";
 import ProductList from "../components/ProductList.vue";
 import About from "../views/AboutView.vue";
@@ -17,6 +18,11 @@ const router = createRouter({
       path: "/addProduct",
       name: "addProduct",
       component: AddProduct,
+    },
+    {
+      path: "/DeleteProduct",
+      name: "deleteProduct",
+      component: DeleteProduct,
     },
     {
       path: "/editProduct/:id",

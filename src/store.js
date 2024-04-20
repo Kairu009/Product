@@ -107,7 +107,7 @@ export default new Vuex.Store({
         }
       });
     },
-    deleteProduct({ commit }, productId) {
+    deleteProductAction({ commit }, productId) {
       return new Promise((resolve, reject) => {
         try {
           commit("deleteProduct", productId);
