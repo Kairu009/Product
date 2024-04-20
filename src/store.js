@@ -89,6 +89,9 @@ export default new Vuex.Store({
         state.bookShelf[index] = updatedProduct;
       }
     },
+    deleteProduct(state, productId) {
+      state.bookShelf = state.bookShelf.filter(product => product.id !== productId);
+    },
   },
   actions: {
     addProduct({ commit }, product) {
@@ -98,6 +101,16 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         try {
           commit("updateProduct", updatedProduct);
+          resolve();
+        } catch (error) {
+          reject(error);
+        }
+      });
+    },
+    deleteProduct({ commit }, productId) {
+      return new Promise((resolve, reject) => {
+        try {
+          commit("deleteProduct", productId);
           resolve();
         } catch (error) {
           reject(error);

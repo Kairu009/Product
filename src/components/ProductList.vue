@@ -11,7 +11,7 @@
           </div>
           <div class="controls">
             <button @click="goToEditProduct(book.id)">Edit</button>
-            <button>Delete</button>
+            <button @click="goToDeleteProduct(book.id)">Delete</button>
           </div>
         </div>
       </div>
@@ -33,6 +33,9 @@ export default {
     goToEditProduct(bookId) {
       // pass the book id as a parameter when navigating
       this.$router.push({ name: "editProduct", params: { id: bookId } });
+    },
+    goToDeleteProduct(productId) {
+      this.$router.push({ name: "deleteProduct", params: { id: productId } });
     },
   },
   computed: {
