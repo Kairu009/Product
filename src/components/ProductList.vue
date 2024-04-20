@@ -3,17 +3,19 @@
     <h2>Products Lists</h2>
     <div class="scroll">
       <div class="container">
-        <div class="card" v-for="book in bookShelf" :key="book.id">
-          <div class="details">
-            <h3>{{ book.name }}</h3>
-            <p>{{ book.description }}</p>
-            <p>₱ {{ book.price }}</p>
+        <transition-group name="fade">
+          <div class="card" v-for="book in bookShelf" :key="book.id">
+            <div class="details">
+              <h3>{{ book.name }}</h3>
+              <p>{{ book.description }}</p>
+              <p>₱ {{ book.price }}</p>
+            </div>
+            <div class="controls">
+              <button @click="goToEditProduct(book.id)">Edit</button>
+              <button>Delete</button>
+            </div>
           </div>
-          <div class="controls">
-            <button @click="goToEditProduct(book.id)">Edit</button>
-            <button>Delete</button>
-          </div>
-        </div>
+        </transition-group>  
       </div>
     </div>
     <div class="wrapper-add">
@@ -134,5 +136,21 @@ h2 {
 
 .wrapper-add button:hover {
   background-color: hsla(160, 100%, 47%, 1);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.pan-left-enter-active, .pan-left-leave-active {
+  transition: transform 0.5s ease-in-out;
+}
+
+.pan-left-enter, .pan-left-leave-to {
+  transform: translateX(100%);
 }
 </style>

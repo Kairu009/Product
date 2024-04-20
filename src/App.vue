@@ -24,7 +24,12 @@ import Title from "./components/Title.vue";
     </div>
   </header>
 
-  <RouterView />
+    <router-view v-slot="{ Component }">
+    <transition name="router-transition" mode="out-in">
+      <component :is="Component" class="pop-in"/>
+    </transition>
+  </router-view>
+
 </template>
 
 <style scoped>
@@ -70,5 +75,38 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+.pan-left-enter-active, .pan-left-leave-active {
+  transition: transform 0.5s;
+}
+.pan-left-enter, .pan-left-leave-to {
+  transform: translateX(-100%);
+}
+
+.pop-in {
+  animation: popIn 0.5s;
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.router-transition-enter-active, .router-transition-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.router-transition-enter, .router-transition-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
 }
 </style>
