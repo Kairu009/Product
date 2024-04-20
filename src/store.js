@@ -85,7 +85,7 @@ export default new Vuex.Store({
         (p) => p.id === updatedProduct.id
       );
       if (index !== -1) {
-        // Directly update the product at the found index
+        // directly update the product at the found index
         state.bookShelf[index] = updatedProduct;
       }
     },
